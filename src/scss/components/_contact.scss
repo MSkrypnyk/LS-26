@@ -1,0 +1,31 @@
+.contact {
+  background: var(--bg-secondary);
+  padding-top: 187rem;
+  padding-bottom: 189rem;
+  @include mobile {
+    padding-top: 80rem;
+    padding-bottom: 80rem;
+  }
+  
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 173rem;
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50rem;
+    }
+  }
+
+  &__title {
+    max-width: 826rem;
+  }
+
+  &__btn {
+    font-family: var(--ff);
+    font-size: 21rem;
+    border-radius: 5rem;
+    padding: 15rem 48rem;
+  }
+}

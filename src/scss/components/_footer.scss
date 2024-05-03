@@ -1,0 +1,46 @@
+.footer {
+  padding-top: 50rem;
+  padding-bottom: 100rem;
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+  justify-content: space-between;
+  @include mobile {
+    padding-top: 140rem;
+    padding-bottom: 50rem;
+  }
+  @include tablet {
+    flex-direction: column;
+    gap: 40rem;
+  }
+
+  &__link {
+    display: flex;
+    gap: 40rem;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__link a {
+    font-weight: 400;
+    font-size: 18rem;
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 237%;
+    letter-spacing: -0.03em;
+    color: var(--c-primary);
+    @include mobile {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 18rem;
+      line-height: 156%;
+      color: var(--c-text-white);
+    }
+  }
+}

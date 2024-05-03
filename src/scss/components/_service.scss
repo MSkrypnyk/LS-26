@@ -1,0 +1,58 @@
+.service {
+  margin-bottom: 150rem;
+  @include mobile {
+    margin-bottom: 140rem;
+  }
+
+  &__title {
+    max-width: 695rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(384rem, 1fr));
+	gap: 24rem;
+  
+	@include mobile {
+	  margin-top: 50rem;
+	  grid-template-columns: 1fr;
+	}
+  }
+  
+  &-item {
+	padding: 48rem 42rem;
+	display: grid;
+	gap: 20rem;
+	text-align: center;
+  
+	@include mobile {
+	  padding: 20rem;
+	}
+  
+	&__img {
+	  width: 69rem;
+	  height: 69rem;
+	  border-radius: 50%;
+	  margin-inline: auto;
+	}
+  
+	&__title {
+	  font-weight: 600;
+	  font-size: 28rem;
+	  line-height: 38rem;
+	  letter-spacing: -0.750316px;
+	}
+  
+	&__desc {
+	  font-weight: 400;
+	  font-size: 20rem;
+	  line-height: 28rem;
+	  letter-spacing: -0.500211rem;
+	  color: var(--c-primary);
+	}
+  }
+  
+}
+

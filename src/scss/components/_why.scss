@@ -1,0 +1,52 @@
+.why {
+  padding-bottom: 150rem;
+  
+  &__info {
+    display: flex;
+    gap: 24rem;
+    margin-bottom: 50rem;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    line-height: 117%;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 21rem;
+    line-height: 186%;
+    letter-spacing: -0.03em;
+    color: var(--c-primary);
+    flex-shrink: 0;
+    max-width: 588rem;
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__img-btn {
+    padding: 51rem 52rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: var(--c-secondary);
+    transition: var(--transition);
+    @include mobile {
+      padding: 25rem 27rem;
+    }
+  }
+  &__img-btn:hover {
+    background-color: var(--bg-primary);
+  }
+}

@@ -1,0 +1,22 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
+
+:root {
+  --font-family: "Nunito Sans", sans-serif;
+  --second-family: "Archivo Black", sans-serif;
+  --third-family: "Montserrat", sans-serif;
+
+  --transition: 0.2s all ease-in-out;
+
+  --c-primary:rgba(255, 255, 255, 0.7);
+  --c-secondary: #5454d4;
+  --c-text-white: #fff;
+  --border-btn: 1rem solid #fff;
+
+  --bg-primary: #19191b;
+  --bg-secondary: rgba(30, 30, 32, 0.5);
+  --bg-item: #1e1e20;
+}

@@ -1,0 +1,17 @@
+.portfolio {
+  padding-bottom: 168rem;
+
+  &-list {
+    margin-top: 70rem;
+  }
+
+  &-item {
+    padding: 24rem;
+    display: inline-flex;
+    border-radius: 14rem;
+    background: var(--bg-item);
+    img {
+      border-radius: 12rem;
+    }
+  }
+}
