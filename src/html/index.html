@@ -13,7 +13,7 @@
 		href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
 		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -25,11 +25,20 @@
 	@@include('blocks/portfolio.html')
 	@@include('blocks/contact.html')
 	@@include('blocks/footer.html')
+	<div class="body-light1"></div>
+	<div class="body-light2"></div>
 
-
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="./js/index.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
 		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script>
+		AOS.init({
+			duration: 800, // тривалість анімації
+			easing: 'ease', // тип анімації
+			once: true // анімація відбудеться лише один раз
+		});
+	</script>
 	<script>
 		/**
 	 * Owl Carousel v2.3.4
@@ -50,16 +59,24 @@
 			dots: true,
 			responsive: {
 				0: {
-					items: 1
+					items: 1,
+					nav: true,
+					dots: false
 				},
 				992: {
-					items: 2
+					items: 2,
+					nav: false,
+					dots: true
 				},
 				1300: {
-					items: 3
-				},
+					items: 3,
+					nav: false,
+					dots: true
+				}
 			}
-		})
+		});
+
+
 	</script>
 	<script>
 		function navToggle() {

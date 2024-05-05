@@ -13,7 +13,7 @@
 		href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
 		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -43,8 +43,9 @@
 		<a href="/" class="btn _secondary header__btn">Contact us</a>
 	</div>
 </header>
+
 	<div class="container">
-    <section class="welcome">
+    <section class="welcome"  data-aos="fade-down">
         <div class="welcome__info">
             <h1 class="welcome__title title-lg ">Build Your Awesome Platform</h1>
             <p class="welcome__desc">Enver studio is a digital studio that offers several services such as UI/UX Design
@@ -59,31 +60,35 @@
         <div class="welcome__img">
             <div class="welcome__img-backdrop"></div>
             <img src="./img/welcome/user.png" alt="user">
+            <div class="welcome__wave"><img src="./img/icons/line.svg" alt="line"></div>
+            <div class="welcome__circles"><img src="./img/icons/circles.svg" alt="circles"></div>
+            <div class="welcome__play"><img src="./img/icons/play.svg" alt="play"></div>
+            <div class="welcome__add"><img src="./img/icons/add.svg" alt="add"></div>
         </div>
     </section>
 </div>
 	<div class="container">
     <section class="why">
-        <div class="why__info">
+        <div class="why__info " >
             <div class="why__title title-lg">Why Enver Is The Best Choice?</div>
             <div class="why__desc">Watch this one minute video so you understand why you should use our services!</div>
         </div>
-        <div class="why__img">
-            <a class="why__img-btn" href="/"><svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+        <a href="/" class="why__img">
+            <div class="why__img-btn"><svg width="20" height="22" viewBox="0 0 20 22" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M19.74 10.565L0.766135 0.0652675C0.60735 -0.0226937 0.412567 -0.0216833 0.254751 0.0679202C0.0969347 0.157524 -9.82103e-05 0.322198 7.4594e-08 0.500257V21.4997C-9.82103e-05 21.6778 0.0969347 21.8425 0.254751 21.9321C0.412567 22.0217 0.60735 22.0227 0.766135 21.9347L19.74 11.435C19.9007 11.3462 20 11.1801 20 11C20 10.8199 19.9007 10.6538 19.74 10.565Z"
                         fill="white" />
-                </svg></a>
+                </svg></div>
             <img src="./img/why/people.png" alt="people">
-        </div>
+        </a>
     </section>
 </div>
 	<div class="container">
 	<section class="service">
 		<div class="title-lg service__title">The Service We Provide For You</div>
 		<div class="service-list">
-			<div class="service-item">
+			<div class="service-item " >
 				<div class="service-item__img">
 					<img src="./img/service/1.svg" alt="Development">
 				</div>
@@ -128,10 +133,15 @@
 				<div class="service-item__desc">Create a platform with the best and coolest quality from us.</div>
 			</div>
 		</div>
+		<div class="service__play"><img src="./img/icons/play.svg" alt="play"></div>
+		<div class="service__add"><img src="./img/icons/add.svg" alt="add"></div>
+		<div class="service__light"></div>
+		<div class="service__light2"></div>
+		<div class="service__light3"></div>
 	</section>
 </div>
-	<section class="portfolio">
 	<div class="container">
+	<section class="portfolio">
 		<div class="title-md">Our Awesome Portofolio</div>
 		<div class="portfolio-list">
 			<div class="owl-carousel">
@@ -155,14 +165,20 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+		<div class="portfolio__wave"><img src="./img/icons/line.svg" alt="line"></div>
+		<div class="portfolio__circles"><img src="./img/icons/circles.svg" alt="circles"></div>
+		<div class="portfolio__add"><img src="./img/icons/add.svg" alt="add"></div>
+	</section>
+</div>
 	<section class="contact">
     <div class="container contact__container">
         <div class="contact__title title-lg">Contact us for the service you want to use</div>
         <a href="/" class="btn _primary contact__btn">Contact us</a>
+        <div class="contact__circles"><img src="./img/icons/circles.svg" alt="circles"></div>
+		<div class="contact__add"><img src="./img/icons/add.svg" alt="add"></div>
     </div>
 </section>
+
 	<div class="container">
 	<footer class="footer">
 		<a href="/" class="header__logo">
@@ -178,11 +194,20 @@
 			Reserved</div>
 	</footer>
 </div>
+	<div class="body-light1"></div>
+	<div class="body-light2"></div>
 
-
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="./js/index.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
 		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script>
+		AOS.init({
+			duration: 800, // тривалість анімації
+			easing: 'ease', // тип анімації
+			once: true // анімація відбудеться лише один раз
+		});
+	</script>
 	<script>
 		/**
 	 * Owl Carousel v2.3.4
@@ -203,16 +228,24 @@
 			dots: true,
 			responsive: {
 				0: {
-					items: 1
+					items: 1,
+					nav: true,
+					dots: false
 				},
 				992: {
-					items: 2
+					items: 2,
+					nav: false,
+					dots: true
 				},
 				1300: {
-					items: 3
-				},
+					items: 3,
+					nav: false,
+					dots: true
+				}
 			}
-		})
+		});
+
+
 	</script>
 	<script>
 		function navToggle() {

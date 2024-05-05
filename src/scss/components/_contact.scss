@@ -6,11 +6,12 @@
     padding-top: 80rem;
     padding-bottom: 80rem;
   }
-  
+
   &__container {
     display: flex;
     align-items: center;
     gap: 173rem;
+    position: relative;
     @include tablet {
       flex-direction: column;
       align-items: flex-start;
@@ -27,5 +28,27 @@
     font-size: 21rem;
     border-radius: 5rem;
     padding: 15rem 48rem;
+  }
+
+  &__circles {
+    position: absolute;
+    bottom: -100rem;
+    left: 30rem;
+    @include mobile {
+      width: 40rem;
+      height: 47rem;
+      bottom: -60rem;
+    }
+  }
+
+  &__add {
+    position: absolute;
+    top: -110rem;
+    right: 20rem;
+    @include mobile {
+      width: 28rem;
+      height:28rem;
+      top: -60rem;
+    }
   }
 }

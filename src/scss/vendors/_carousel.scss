@@ -336,3 +336,41 @@
 .owl-item:nth-child(3n) {
   transform: translateY(116px);
 }
+
+.owl-carousel .owl-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  width: 39px;
+  height: 39px;
+  font-size: 25px;
+  line-height: 39px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  background-color: #5454d4;
+}
+
+@media (max-width: 992px) {
+  .owl-item:nth-child(2n),
+  .owl-item:nth-child(3n) {
+    transform: translateY(0);
+  }
+  .owl-carousel .owl-stage-outer {
+    padding-bottom: 50px;
+  }
+}

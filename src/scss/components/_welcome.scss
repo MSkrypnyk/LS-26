@@ -45,5 +45,54 @@
 
   &__img {
     flex-shrink: 0;
+    position: relative;
+  }
+
+  &__wave {
+    position: absolute;
+    top: 95rem;
+    left: -74rem;
+    @include tablet {
+      left:0;
+    }
+    @include mobile {
+      width: 63rem;
+      height: 20rem;
+      left:0;
+      top: 60rem;
+    }
+  }
+
+  &__circles {
+    position: absolute;
+    right: 0;
+    top: 70rem;
+    @include mobile {
+      width: 36rem;
+      height: 42rem;
+    }
+  }
+
+&__play {
+  position: absolute;
+  bottom: 34rem;
+  left: -67rem;
+  @include tablet {
+    left:-20rem;
+  }
+  @include mobile {
+    width: 66rem;
+    height: 76rem;
+  }
+}
+
+  &__add {
+    position: absolute;
+   right: 0;
+   bottom: 54rem;
+   @include mobile {
+    width: 39rem;
+    height: 39rem;
+  }
   }
 }

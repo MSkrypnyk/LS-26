@@ -1,6 +1,9 @@
 .portfolio {
   padding-bottom: 168rem;
-
+  position: relative;
+  @include mobile {
+    padding-bottom: 140rem;
+  }
   &-list {
     margin-top: 70rem;
   }
@@ -14,4 +17,47 @@
       border-radius: 12rem;
     }
   }
+
+		&__wave {
+      position: absolute;
+      bottom: 140rem;
+      left: -67rem;
+      @include tablet{
+        left: 33rem;
+        bottom: 80rem;
+      }
+      @include mobile{
+        width: 63rem;
+        height: 20rem;
+      }
+		}
+
+		&__circles {
+      position: absolute;
+      right: 67rem;
+      top: 30rem;
+      transform: rotate(-20deg);
+      @include mobile{
+        width: 54rem;
+        height: 58rem;
+        top:-70rem;
+        right: 15rem;
+      }
+		}
+
+		&__add {
+      position: absolute;
+      top: -110rem;
+      left: -47rem;
+      transform: rotate(-55deg);
+      @include tablet{
+        left: -10rem;
+        transform: rotate(0);
+      }
+      @include mobile{
+        width: 28rem;
+        height: 28rem;
+      }
+		}
+
 }

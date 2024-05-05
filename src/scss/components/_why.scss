@@ -1,6 +1,6 @@
 .why {
   padding-bottom: 150rem;
-  
+
   &__info {
     display: flex;
     gap: 24rem;
@@ -29,10 +29,11 @@
 
   &__img {
     position: relative;
-    cursor: pointer;
+    display: inline-block;
   }
 
   &__img-btn {
+    display: inline-flex;
     padding: 51rem 52rem;
     border-radius: 50%;
     position: absolute;
