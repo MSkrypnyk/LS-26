@@ -28,15 +28,17 @@
 	<div class="body-light1"></div>
 	<div class="body-light2"></div>
 
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 	<script src="./js/index.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
 		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		AOS.init({
-			duration: 800, // тривалість анімації
-			easing: 'ease', // тип анімації
-			once: true // анімація відбудеться лише один раз
+			duration: 600,
+			easing: 'ease',
+			once: true
 		});
 	</script>
 	<script>
@@ -92,6 +94,34 @@
 			yearElement.textContent = currentYear;
 		}
 		window.onload = updateCurrentYear;
+		function handleIntersect(entries, observer) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					if (entry.target.classList.contains('tracking-in-expand')) {
+						entry.target.classList.add('animate');
+					} else if (entry.target.classList.contains('slide-in-top')) {
+						entry.target.classList.add('animate');
+					}
+					observer.unobserve(entry.target);
+				}
+			});
+		}
+
+		const observer = new IntersectionObserver(handleIntersect, {
+			root: null,
+			threshold: 0.5
+		});
+
+		const trackingExpandElements = document.querySelectorAll('.tracking-in-expand');
+		trackingExpandElements.forEach(element => {
+			observer.observe(element);
+		});
+
+		const slideInTopElements = document.querySelectorAll('.slide-in-top');
+		slideInTopElements.forEach(element => {
+			observer.observe(element);
+		});
+
 	</script>
 </body>
 
